@@ -1,0 +1,17 @@
+.first_lesson_container{
+    background-color: aqua;
+    width: 350px;
+    height: 400px;
+    padding: 20px; 
+    text-align: center;   
+}
+
+.list_task_lesson_container{
+    list-style: none;
+}
+
+.link_lesson_container{
+    text-decoration: none;
+    font-size: 25px; 
+    color: black;
+}
