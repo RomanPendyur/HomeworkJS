@@ -1,11 +1,10 @@
 "use strict"
 
-function numberSimbols (){
-    let x = +prompt("Enter circumference!");
-    let y = +prompt("Enter perimeter of a square!");
-    if (y / 3.14 > x)
-         {console.log("Your circle can be placed in the square you specified");} 
-    else {console.log("Sorry but your circle can not be placed in the square you specified");}
+function dayOfTheWeek(){
+    let x = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    let y = 0;
+    while (confirm(`${x[y]}. Want to know which day is next?`)) {
+    y = (y + 1) % x.length;}
 }
 
-numberSimbols ();
+console.log(dayOfTheWeek());

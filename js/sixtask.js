@@ -1,13 +1,18 @@
 "use strict"
 
-function moneyConverter(){
-    let x = +prompt("Enter how much you need to transfer USD!")
-    let y = prompt("What currency are you interested in? You can choose EUR, UAN or AZN")
-    if ( y === "EUR") {x = x * 0.85}
-    else if ( y === "UAN") {x = x / 0.036}
-    else if ( y === "AZN") {x = x / 0.59}
-    else {console.log("Please choose from EUR, UAN or AZN")}
-    return console.log(x)
+function calculator(){    
+    let result = 0;
+    function calculating(){
+    let x = +prompt("Enter first number!");
+    let y = +prompt("Enter second number");
+    let z = prompt("Enter the action you want to perform.(For add numbers  +, subtract numbers -, multiply numbers *, and divide numbers /)");
+    if (z == "+"){result = x + y};
+    if (z == "-"){result = x - y};
+    if (z == "*"){result = x * y};
+    if (z == "/"){result = x / y};
+    console.log(result)
+    }
+    while (confirm("Your result is " + result + "Do you want to continue working with the calculator?") == true ){calculating()}
 }
 
-moneyConverter()
+calculator()

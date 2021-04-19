@@ -1,9 +1,9 @@
 "use strict"
 
-function findYear(){
-    let x = +prompt("Enter year please!")
-    if (x % 400 === 0 || x % 4 === 0){console.log("This year is leap year!")}
-    else {console.log("This year is not leap year!")}
+function numberLength(){
+    let x = prompt("Enter number please!").length;    
+    return x;
+
 }
 
-findYear()
+console.log(numberLength())
