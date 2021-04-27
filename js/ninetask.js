@@ -1,19 +1,16 @@
 "use strict"
 
-/*Я знайшов це рішення, сам я не зміг додуматись як правильно*/
+function number(){
+    let x = document.querySelector(".result__style");
+    let y = document.querySelector(".wiev_result__style");
 
-function numberSimbols (){
-     
-document.write("<h1>Таблица умножения</h1>"); 
-for (let j = 1; j <= 9; j++){  
-document.write("<div style='float: left; width: 70px;'>"); 
-for (let i = 1; i <=9; i++)  
-{ 
-document.write(i + "*" + j + "=" +(i*j) + "<br>");  
-}  
-document.write ("</div>"); 
- 
-} 
+y.addEventListener("click", function () {
+  let sec = document.querySelector(".number__style").value;
+  const hours = Math.floor(sec / 3600);
+  const minutes = Math.floor(sec / 60) - hours * 60;
+  const seconds = sec % 60;  
+  return ((x.innerHTML = `Your result is - ${hours}:${minutes}:${seconds} !`));
+});
 }
 
-console.log(numberSimbols());
+number();

@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/indexStyle.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Задание 10</h1>
-    <h3>
-      Игра «Угадай число». Предложить пользователю загадать число от 0 до 100 и
-      отгадать его следующим способом: каждую итерацию цикла делите диапазон
-      чисел пополам, записываете результат в N и спрашиваете у пользователя
-      «Ваше число > N, < N или == N?». В зависимости от того, что указал
-      пользователь, уменьшаете диапазон. Начальный диапазон от 0 до 100,
-      поделили пополам и получили 50. Если пользователь указал, что его число >
-      50, то изменили диапазон на от 51 до 100. И так до тех пор, пока
-      пользователь не выберет == N.
-    </h3>
-    <fieldset>
-      <h2>Нажмите старт, чтобы начать игру</h2>
-      <button class="button">Старт</button>
-      <hr />
-      <h2 class="result"></h2>
-    </fieldset>
-    <br />
-    <a href="../index.html">Back to the title</a>
+    <div class="block__style">
+        <h1>Задание 10</h1> 
+        <div>
+            <h2>Enter your data in order to find out the difference between the dates</h2>
+            <h3>Enter the first date</h3>
+            <input class="number_one__style" type="number" placeholder="Enter hours"/><span>   Enter hours please</span><br/><br/>
+            <input class="number_two__style" type="number" placeholder="Enter minutes"/><span>   Enter minutes please</span><br/><br/>
+            <input class="number_tree__style" type="number" placeholder="Enter seconds"/><span>   Enter seconds please</span><br/><br/>
+            <h3>Enter the second date</h3>
+            <input class="number_four__style" type="number" placeholder="Enter hours"/><span>   Enter hours please</span><br/><br/>
+            <input class="number_five__style" type="number" placeholder="Enter minutes"/><span>   Enter minutes please</span><br/><br/>
+            <input class="number_six__style" type="number" placeholder="Enter seconds"/><span>   Enter seconds please</span><br/><br/>
+            <button class="wiev_result__style">Wiev result</button><br>
+            <h2 class="result__style"></h2>
+        </div>
+        <br />    
+    </div>
     <script src="../js/tentask.js"></script>
 </body>
 </html>

@@ -1,18 +1,28 @@
 "use strict"
 
-function calculator(){    
-    let result = 0;
-    function calculating(){
-    let x = +prompt("Enter first number!");
-    let y = +prompt("Enter second number");
-    let z = prompt("Enter the action you want to perform.(For add numbers  +, subtract numbers -, multiply numbers *, and divide numbers /)");
-    if (z == "+"){result = x + y};
-    if (z == "-"){result = x - y};
-    if (z == "*"){result = x * y};
-    if (z == "/"){result = x / y};
-    console.log(result)
-    }
-    while (confirm("Your result is " + result + "Do you want to continue working with the calculator?") == true ){calculating()}
+function number(){    
+    let x = document.querySelector(".result__style");
+    let y = document.querySelector(".wiev_result__style");    
+    function perfectNumber(z) {
+      let c = 0;    
+      for (let i = 1; i < z; i++) {
+        if (z % i == 0) {
+          c += i;
+        }
+      }return c === z;
+    }    
+    y.addEventListener("click", function () {
+      let a = document.querySelector(".number_one__style").value;
+      let b = document.querySelector(".number_two__style").value;
+      let result = [];    
+      for (let i = a; i <= b; i++) {
+        if (perfectNumber(i)) {
+          result.push(i);
+        }        
+      }return (
+        (x.innerHTML = `Result is: ${result}`)
+      );
+    });
 }
 
-calculator()
+number()

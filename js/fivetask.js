@@ -1,23 +1,21 @@
 "use strict"
 
-function numberResult(){
-    let y = 0;
-    let z = 0;
-    let c = 0;
-    let v = 0;
-    let b = 0;   
-    let x = prompt("Please enter numbers separated by commas!").split(",");    
-    for (let i = 0; i <= x.length; i++){
-        if (x[i] > 0){y++}
-        if (x[i] < 0){z++}
-        if (x[i] == 0){c++}
-        if (x[i] % 2 == 0){v++ || b++}
-    } return "You entered " + y + " positive numbers. " 
-           + " You entered " + z + " negative number. " 
-           + " You entered" + c + " zeros. "
-           + " You entered " + v + " even number. "
-           + " You entered " + b + " odd number. "
+function number(){
+    let x = document.querySelector(".result__style");
+    let y = document.querySelector(".wiev_result__style");    
+    y.addEventListener("click", function () {
+      let z = document.querySelector(".number__style").value;
+      let a = z - 1;
+      let b = z;
+      for (let i = 2; z > 1; ) {
+        if (!(z % i)) {
+          a -= i;
+          z = z / i;
+        } else i++;
+      }
+      if (!a)(x.innerHTML = "Number " + b + " is perfect!");
+      else (x.innerHTML = "Number " + b + " is not perfect!");
+    });
 } 
 
-
-console.log(numberResult())
+number()

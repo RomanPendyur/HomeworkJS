@@ -1,14 +1,22 @@
 "use strict"
 
 function number(){
-    let x = +prompt("Enter first number");
-    let y = +prompt("Enter last number");
-    let result = 0; 
-    while(x <= y){       
-        result+=x;  
-        x++;
-    }
-    return result
+    let x = document.querySelector(".result__style");
+    let y = document.querySelector(".wiev_result__style");
+
+y.addEventListener("click", function () {
+  let a = document.querySelector(".first_number__style").value;
+  let b = document.querySelector(".second_number__style").value;
+  if (a < b) {
+    return (x.innerHTML = -1);
+  }
+  if (a > b) {
+    return (x.innerHTML = 1);
+  } else {
+    return (x.innerHTML = 0);
+  }
+});
 } 
 
-console.log(number())
+number()
+
