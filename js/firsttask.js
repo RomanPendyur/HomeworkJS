@@ -25,6 +25,7 @@ function addNewProduct(){
 
 
 function productlistFun (){
+
 addProductBtn.addEventListener("click", function () 
 { 
   let newProduct = getProduct()
