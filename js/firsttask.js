@@ -1,22 +1,24 @@
 "use strict"
 
-function number(){
-    let x = document.querySelector(".result__style");
-    let y = document.querySelector(".wiev_result__style");
+let productName = document.querySelector(".first_input__style").value;
+let productQuantity = document.querySelector(".second_input__style").value;
+let productStatus = document.querySelector(".third_input__style").value;*/
+let addProductBtn = document.querySelector(".add_new__style");
+let wievListBtn = document.querySelector(".wiev_list__style");
+let productlist = document.querySelector(".list__style");
 
-y.addEventListener("click", function () {
-  let a = document.querySelector(".first_number__style").value;
-  let b = document.querySelector(".second_number__style").value;
-  if (a < b) {
-    return (x.innerHTML = -1);
+let shoppingList = []
+
+
+function getProduct(){
+  return {
+    nameProd: productName, 
+    quantity: productQuantity,
+    status: productStatus 
   }
-  if (a > b) {
-    return (x.innerHTML = 1);
-  } else {
-    return (x.innerHTML = 0);
-  }
-});
-} 
+}
 
-number()
 
+addProductBtn.addEventListener("click", function () 
+{return (productlist.innerHTML = `${shoppingList}`);
+});  
