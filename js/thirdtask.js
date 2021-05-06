@@ -1,16 +1,39 @@
 "use strict"
 
 function number(){
-    let x = document.querySelector(".result__style");
-    let y = document.querySelector(".wiev_result__style"); 
-    y.addEventListener("click", function () {
-        let a = document.querySelector(".number_one__style").value;
-        let b = document.querySelector(".number_two__style").value;
-        let c = document.querySelector(".number_three__style").value;
-        if (a < 0 || b < 0 || c < 0) {
-        return ((x.innerHTML = `Вводите только положительные числа`));
-        } else {return (x.innerHTML = a + b + c);}
-    });  
+    let button = document.querySelector(".change_sigmal__style");
+    let colors = document.querySelectorAll(".signal__style");
+    let redSignal = document.querySelectorAll(".red_signal__style");
+    let yellowSignal = document.querySelectorAll(".yellow_signal__style");
+    let greenSignal = document.querySelectorAll(".green_signal__style");
+    let stage = 0;
+    
+
+button.addEventListener("click", function switchColor() {
+  switch (stage % 4) {
+    case 0:
+      colors[0].style.opacity = "1";
+      colors[1].style.opacity = "0.1";
+      colors[2].style.opacity = "0.1";
+      break;
+    case 1:
+      colors[0].style.opacity = "1";
+      colors[1].style.opacity = "1";
+      colors[2].style.opacity = "0.1";
+      break;
+    case 2:
+      colors[0].style.opacity = "0.1";
+      colors[1].style.opacity = "0.1";
+      colors[2].style.opacity = "1";
+      break;
+    case 3:
+      colors[0].style.opacity = "0.1";
+      colors[1].style.opacity = "1";
+      colors[2].style.opacity = "0.1";
+      break;
+  }
+  stage++;
+});
 }
 
 number()

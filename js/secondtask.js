@@ -1,22 +1,20 @@
 "use strict"
 
 function number(){
-    let x = document.querySelector(".result__style");
-    let y = document.querySelector(".wiev_result__style");
-    let z = document.querySelector(".enter_number__style");
+    let window = document.querySelector(".modal_window__style");
+    let wievResultBtn = document.querySelector(".wiev_result__style");
+    let hideResultBtn = document.querySelector(".hide_window__style");
+    window.style.transform = "translateY(-500px)";
+    window.style.backgroundColor = "grey";
+    window.style.textAlign = "center";
+    window.style.padding = "5px";
 
-    function factorial(a) {
-        if (a == 1) {
-        return (x.innerHTML = 1);
-        } else {
-        return a * factorial(a - 1);
-        }
-    }
-
-    y.addEventListener("click", function () {    
-    x.innerHTML = factorial(z.value);
-});
-
+    wievResultBtn.addEventListener("click", function () {
+        window.style.transform = "translateY(35px)";
+    });
+    hideResultBtn.addEventListener("click", function () {
+        window.style.transform = "translateY(-500px)";
+    });
 }
 
 number()
